@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator: A JavaScript Events and Event Listeners Tutorial</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="calc.js"></script>
+</head>
+<body onload="init()">
+    <h1 class="header-font">
+        Calculator Program
+    </h1>
+    <table>
+        <tr>
+            <td colspan=5 class="calc" id="res"></td>
+        </tr>
+        <tr>
+            <td><button onclick="negate()">+/-</button></td>
+            <td><button onclick="clearEntry()">CE</button></td>
+            <td><button onclick="clr()">C</button></td>
+            <td><button id="div" 
+                onclick="updateFunc('/')">÷</button>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="9" onclick="addToNum('9')">9</button></td>
+            <td><button id="8" onclick="addToNum('8')">8</button></td>
+            <td><button id="7" onclick="addToNum('7')">7</button></td>
+            <td><button id="mult" 
+                onclick="updateFunc('*')">*</button>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="6" onclick="addToNum('6')">6</button></td>
+            <td><button id="5" onclick="addToNum('5')">5</button></td>
+            <td><button id="4" onclick="addToNum('4')">4</button></td>
+            <td><button id="sub" 
+                onclick="updateFunc('-')">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td><button id="3" onclick="addToNum('3')">3</button></td>
+            <td><button id="2" onclick="addToNum('2')">2</button></td>
+            <td><button id="1" onclick="addToNum('1')">1</button></td>
+            <td><button id="add" 
+                onclick="updateFunc('+')">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=3><button id="0" onclick="addToNum('0')">0</button></td>
+            <td><button id="eqls">=</button></td>
+        </tr>
+    </table>
+</body>
+</html>

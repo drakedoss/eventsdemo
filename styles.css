@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header-font {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2rem 0 0 2rem;
+}
+
+.calc {
+    font-family: "Lucida Console", Courier, monospace;
+    color: #9c71d1;
+    text-align: right;
+    border: 3px solid black;
+    width: 100%;
+    height: 1rem;
+    background-color: #35185e;
+}
+
+table {
+    margin: 4rem;
+    background-color: #999999;
+    border: 2px solid black;
+    width: 20%;
+}
+
+td {
+    padding: 0.3rem;
+    width: 20px;
+}
+
+button {
+    width: 100%;
+    height: 100%;
+}
+
+.clear {
+    align-self: right;
+}
