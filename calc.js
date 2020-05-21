@@ -3,6 +3,10 @@ var secondNum = "";
 var result;
 var curFunc;
 
+/**
+ * Initializes the calculator screen and adds an event listener
+ * to the equals button
+ */
 var init = function() {
     document.getElementById("res").innerText = firstNum;
     document.getElementById("eqls").addEventListener("click", function() {
@@ -10,11 +14,20 @@ var init = function() {
     });
 }
 
+/**
+ * Updates the calculator screen with a provided number or string
+ * @param {Number} res The number to display on the calculator screen
+ */
 var updateResult = function(res) {
     result = res.toString();
     document.getElementById("res").innerText = result;
 }
 
+/**
+ * Appends a number to the end of what is currently on the calculator
+ * screen. Useful for when punching in digits
+ * @param {Number} num The number to append
+ */
 var addToNum = function(num) {
     if (curFunc) {
         secondNum += num;
@@ -34,6 +47,9 @@ var addToNum = function(num) {
     }
 }
 
+/**
+ * Negates the value displayed on the calculator screen
+ */
 var negate = function () {
     if (curFunc) {
         secondNum = secondNum * -1;
@@ -51,6 +67,9 @@ var negate = function () {
     }
 }
 
+/**
+ * Clears the current entry on the calculator screen
+ */
 var clearEntry = function() {
     if (curFunc) {
         secondNum = "";
@@ -63,6 +82,9 @@ var clearEntry = function() {
     }
 }
 
+/**
+ * Clears an entire calculation from the calculator
+ */
 var clr = function() {
     firstNum = "0";
     secondNum = "";
@@ -71,6 +93,10 @@ var clr = function() {
     updateResult(firstNum);
 }
 
+/**
+ * Performs the sum, subtraction, multiplication, or division of two specified
+ * operands, updating the screen after the calculation
+ */
 var performOperation = function() {
     firstNum = parseInt(firstNum);
     secondNum = parseInt(secondNum);
@@ -96,6 +122,11 @@ var performOperation = function() {
     secondNum = "";
 }
 
+/**
+ * Stores the chosen operation to be performed on the
+ * operands
+ * @param {String} func The chosen operation (+, -, *, /)
+ */
 var updateFunc = function(func) {
     if (result) {
         firstNum = result;
