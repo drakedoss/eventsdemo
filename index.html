@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Calculator: A JavaScript Events and Event Listeners Tutorial</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="calc.js"></script>
+    
 </head>
-<body onload="init()">
 
+<!-- Replace default body with the one commented below to see event bubbling -->
+<!-- <body id="ravemode" onclick="changeColor()"> -->
+    
+<body>
     <h1 class="header-font">
         Calculator Program
     </h1>
@@ -46,6 +49,9 @@
             <td><button id="eqls">=</button></td>
         </tr>
     </table>
+
+    <!-- Parse JavaScript once DOM elements exist -->
+<script type="text/javascript" src="calc.js"></script>
 
 </body>
 </html>

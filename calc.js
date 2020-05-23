@@ -9,9 +9,23 @@ var curFunc;
  */
 var init = function() {
     document.getElementById("res").innerText = firstNum;
-    document.getElementById("eqls").addEventListener("click", function() {
+    document.getElementById("eqls").addEventListener("click", function(e) {
         performOperation();
+        // Uncomment this line when testing event propagation: e.stopPropagation();
     });
+}
+
+init(); // Call the initializing funciton
+
+/**
+ * Assigns a randomly generated color to the HTML element with ID "ravemode".
+ */
+var changeColor = function() {
+    var red = Math.random() * 255;
+    var green = Math.random() * 255;
+    var blue = Math.random() * 255;
+    var colorStr = "rgb(" + red + "," + blue + "," + green + ",255)";
+    document.getElementById("ravemode").style.backgroundColor = colorStr;
 }
 
 /**
@@ -128,7 +142,9 @@ var performOperation = function() {
  * @param {String} func The chosen operation (+, -, *, /)
  */
 var updateFunc = function(func) {
-    if (result) {
+    // If there is a result from a one-step calculation, allow it to be used
+    // for the next calculation unless it is cleared.
+    if (result && !curFunc) {
         firstNum = result;
     }
     curFunc = func;
